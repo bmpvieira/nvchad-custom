@@ -32,6 +32,7 @@ M.telescope = {
     ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "find all" },
     ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "find oldfiles" },
     ["<leader>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "find in current buffer" },
+    ["<leader>fb"] = { "<cmd> Telescope vim_bookmarks all <CR>", "bookmarks" },
     ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "help page" },
 
     -- git
@@ -160,7 +161,7 @@ M.nvterm = {
 
   t = {
     -- toggle in terminal mode
-    ["<leader>/"] = {
+    ["<leader><DEL>"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,
@@ -170,7 +171,7 @@ M.nvterm = {
 
   n = {
     -- toggle in normal mode
-    ["<leader>/"] = {
+    ["<leader><DEL>"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,

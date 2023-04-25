@@ -70,9 +70,14 @@ local plugins = {
     -- lazy = false,
   },
 
+  {
+    "tom-anders/telescope-vim-bookmarks.nvim",
+    -- lazy = false,
+  },
+
   ["nvim-telescope/telescope.nvim"] = {
     lazy = false,
-    extensions_list = { "themes", "terms", "project" },
+    extensions_list = { "themes", "terms", "project", "vim_bookmarks" },
   },
 
   -- Install a plugin
@@ -140,14 +145,23 @@ local plugins = {
   --   enabled = false
   -- },
 
+  -- Tab Worskpace and dependencies
   { "junegunn/fzf", lazy = false, },
   { "junegunn/fzf.vim", lazy = false, },
   { "Konfekt/vim-alias", lazy = false, },
   { "dbakker/vim-projectroot", lazy = false, },
   { "s1341/vim-tabws", lazy = false, },
--- lug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-
+  {
+    "MattesGroeger/vim-bookmarks",
+    lazy = false,
+    cmd = {
+      "BookmarkToggle",
+      "BookmarkAnnotate",
+      "BookmarkNext",
+      "BookmarkPrev",
+    }
+  },
 }
 
 return plugins
