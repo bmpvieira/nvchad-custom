@@ -27,6 +27,15 @@ M.ui = {
       "", "🫤 If I'm using Neovim, then my Emacs config must be broken!"
     },
   },
+  buttons = {
+    { "  Search File", "Spc Spc", "Telescope find_files" },
+    { "  Search Project", "Spc /", "Telescope live_grep" },
+    { "  Find Buffers", "Spc ,", "Telescope buffers" },
+    { "  Find Old files", "Spc f o", "Telescope oldfiles" },
+    { "  Bookmarks", "Spc f b", "Telescope marks" },
+    { "  Themes", "Spc h t", "Telescope themes" },
+    { "  Cheatsheet", "Spc h c", "NvCheatsheet" },
+  },
   tabufline = { enabled = false }
 }
 
