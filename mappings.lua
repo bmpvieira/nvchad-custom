@@ -27,8 +27,25 @@ M.telescope = {
   plugin = true,
   n = {
     ["<leader><leader>"] = { "<cmd> Telescope find_files <CR>", "find files" },
+    ["<leader>/"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
     ["<leader>,"] = { "<cmd> Telescope buffers <CR>", "find buffers" },
-    ["<leader>fs"] = {
+    ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "find all" },
+    ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "find oldfiles" },
+    ["<leader>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "find in current buffer" },
+    ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "help page" },
+
+    -- git
+    ["<leader>fgc"] = { "<cmd> Telescope git_commits <CR>", "git commits" },
+    ["<leader>fgs"] = { "<cmd> Telescope git_status <CR>", "git status" },
+
+    -- pick a hidden term
+    ["<leader>ft"] = { "<cmd> Telescope terms <CR>", "find hidden term" },
+
+    -- theme switcher
+    ["<leader>ht"] = { "<cmd> Telescope themes <CR>", "nvchad themes" },
+
+    -- pickers
+    ["<leader>f*"] = {
       function ()
         require("telescope.builtin").grep_string()
       end,
@@ -78,12 +95,9 @@ M.fugitive = {
     ["<leader>gP"] = { ":Git push <CR>", "git push" },
     ["<leader>gll"] = { ":Gllog -100 <CR>", "git log" },
     ["<leader>glc"] = { ":0Gclog -100 <CR>", "git log current file" },
-    -- ["<leader>go"] = { "<cmd> OpenInGHFile <CR>", "open github file" },
-    -- ["<leader>gr"] = { "<cmd> OpenInGHRepo <CR>", "open github repo" },
   },
 
   v = {
-    -- ["<leader>go"] = { ": OpenInGHFile <CR>", "open github file" },
     ["<leader>go"] = { ":GBrowse <CR>", "open github file" },
   },
 }
