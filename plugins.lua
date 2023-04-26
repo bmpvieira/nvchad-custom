@@ -72,6 +72,9 @@ local plugins = {
 
   {
     "tom-anders/telescope-vim-bookmarks.nvim",
+    dependencies = {
+      "MattesGroeger/vim-bookmarks",
+    },
     -- lazy = false,
   },
 
@@ -154,13 +157,21 @@ local plugins = {
 
   {
     "MattesGroeger/vim-bookmarks",
-    lazy = false,
+    lazy = true,
     cmd = {
       "BookmarkToggle",
       "BookmarkAnnotate",
       "BookmarkNext",
       "BookmarkPrev",
-    }
+      "BookmarkShowAll",
+      "BookmarkClear",
+      "BookmarkClearAll",
+      "BookmarkMoveUp",
+      "BookmarkMoveDown",
+      "BookmarkMoveToLine",
+      "BookmarkSave",
+      "BookmarkLoad",
+    },
   },
 }
 

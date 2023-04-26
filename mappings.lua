@@ -186,6 +186,18 @@ M.trouble = {
   },
 }
 
+M.bookmarks = {
+  n = {
+    ["mm"] = { "<cmd>BookmarkToggle<cr>", "bookmark toggle" },
+    ["mi"] = { "<cmd>BookmarkAnnotate<cr>", "bookmark annotate" },
+    ["mn"] = { "<cmd>BookmarkNext<cr>", "bookmark next" },
+    ["mp"] = { "<cmd>BookmarkPrev<cr>", "bookmark prev" },
+    ["ma"] = { "<cmd>BookmarkShowAll<cr>", "bookmark show all" },
+    ["mc"] = { "<cmd>BookmarkClear<cr>", "bookmark clear" },
+    ["mx"] = { "<cmd>BookmarkClearAll<cr>", "bookmark clear all" },
+  },
+}
+
 M.harpoon = {
   -- plugin = true,
   n = {
