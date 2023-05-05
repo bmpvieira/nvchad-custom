@@ -12,8 +12,11 @@ vim.g.neovide_input_macos_alt_is_meta = true
 vim.opt.relativenumber = true
 
 -- FOLDING
+-- https://www.jmaguire.tech/posts/treesitter_folding/
+-- https://github.com/nvim-treesitter/nvim-treesitter/issues/4152 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldlevelstart = 99
 
 -- THEME
 -- vim.cmd.colorscheme "catppuccin-latte"
