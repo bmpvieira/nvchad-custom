@@ -9,7 +9,10 @@ end
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<leader>bn"] = { "<cmd> enew <CR>", "new buffer" },
     ["<leader>bd"] = { ":bd <CR>", "buffer delete" },
+    ["<leader>fy"] = { ':let @+=expand("%")<CR>', "yank file path" },
+    ["<leader>fY"] = { ':let @+=expand("%:p")<CR>', "yank file path" },
     ["<F5>"] = {
       function ()
         require("base46").toggle_theme()
